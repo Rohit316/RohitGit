@@ -3,16 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.vitormp</groupId>
-	<artifactId>git-release-example</artifactId>
+	<artifactId>RohitGit</artifactId>
 	<version>0.1.11-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<name>git-release-example Maven Webapp</name>
 
 	<scm>
-		<connection>scm:git:git@github.com:sundeepbobba/git-release-example.git</connection>
-		<developerConnection>scm:git:git@github.com:sundeepbobba/git-release-example.git</developerConnection>
-		<url>scm:git:git@github.com:sundeepbobba/git-release-example.git</url>
+		<connection>scm:git:git@github.com:Rohit316/RohitGit.git</connection>
+		<developerConnection>scm:git:git@github.com:Rohit316/RohitGit.git</developerConnection>
+		<url>scm:git:git@github.com:Rohit316/RohitGit.git</url>
 	  <tag>HEAD</tag>
   </scm>
 
