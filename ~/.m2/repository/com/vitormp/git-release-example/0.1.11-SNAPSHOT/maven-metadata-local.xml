@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.vitormp</groupId>
+  <artifactId>git-release-example</artifactId>
+  <version>0.1.11-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <localCopy>true</localCopy>
+    </snapshot>
+    <lastUpdated>20180308011718</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>war</extension>
+        <value>0.1.11-SNAPSHOT</value>
+        <updated>20180308011718</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.1.11-SNAPSHOT</value>
+        <updated>20180308011718</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

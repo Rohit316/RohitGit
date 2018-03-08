@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.vitormp</groupId>
+  <artifactId>git-release-example</artifactId>
+  <versioning>
+    <versions>
+      <version>0.1.11-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20180308011719</lastUpdated>
+  </versioning>
+</metadata>
