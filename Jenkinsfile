@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 pipeline {
-    agent none
+    agent any
     options {
         timestamps()
     }
@@ -10,6 +10,7 @@ pipeline {
             steps {
                 echo("Building project for ")
                 sleep(time:5,unit:'SECONDS')
+            sh 'mvn clean'
             }
             post {
                 success {
@@ -24,6 +25,7 @@ pipeline {
             steps {
                 echo("Testing project for ")
                 sleep(time:5,unit:'SECONDS')
+                sh 'mvn package'
             }
             post {
                 success {
@@ -45,7 +47,9 @@ pipeline {
                 }
                 failure {
                     echo("Deploy stage completed with result 'FAILURE'.")
+                 sh 'mvn deploy'
                 }
+             
             }
         }
     }
