@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo("Building project for ${NAME}.")
+                echo("Building project for ")
                 sleep(time:5,unit:'SECONDS')
             }
             post {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo("Testing project for ${NAME}.")
+                echo("Testing project for ")
                 sleep(time:5,unit:'SECONDS')
             }
             post {
@@ -36,7 +36,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo("Deploying project for ${NAME}.")
+                echo("Deploying project for ")
                 sleep(time:5,unit:'SECONDS')
             }
             post {
@@ -51,10 +51,10 @@ pipeline {
     }
     post {
         success {
-            echo("Pipeline completed for ${NAME} with result 'SUCCESS'.")
+            echo("Pipeline completed for  with result 'SUCCESS'.")
         }
         failure {
-            echo("Pipeline completed for ${NAME} with result 'FAILURE'.")
+            echo("Pipeline completed for  with result 'FAILURE'.")
         }
     }
 }
