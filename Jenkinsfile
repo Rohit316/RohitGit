@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo("Building project for ")
                 sleep(time:5,unit:'SECONDS')
-            sh 'mvn clean'
+                sh 'mvn clean'
             }
             post {
                 success {
@@ -40,6 +40,7 @@ pipeline {
             steps {
                 echo("Deploying project for ")
                 sleep(time:5,unit:'SECONDS')
+                sh 'mvn deploy'
             }
             post {
                 success {
@@ -47,9 +48,7 @@ pipeline {
                 }
                 failure {
                     echo("Deploy stage completed with result 'FAILURE'.")
-                 sh 'mvn deploy'
-                }
-             
+                }      
             }
         }
     }
