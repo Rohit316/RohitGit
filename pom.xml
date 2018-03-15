@@ -1,56 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.springframework</groupId>
-	<artifactId>gs-maven</artifactId>
-	<packaging>jar</packaging>
-	<version>0.1.0</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<dependencies>
-		<!-- tag::joda[] -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>2.9.2</version>
-		</dependency>
-		<!-- end::joda[] -->
-		<!-- tag::junit[] -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- end::junit[] -->
-	</dependencies>
-<properties>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
-  </properties>
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.vitormp</groupId>
+	<artifactId>git-release-example</artifactId>
+	<version>0.1.14-SNAPSHOT</version>
+	<packaging>war<packaging>
+
+	<name>git-release-example Maven Webapp</name
+
+	<scm>
+		<connection>scm:git:https://github.com/Rohit316/RohitGit.git</connection>
+		<developerConnection>scm:git:https://github.com/Rohit316/RohitGit.git</developerConnection>
+		<url>scm:git:https://github.com/Rohit316/RohitGit.git</url>
+          <tag>HEAD</tag>
+  </scm>
+
+	<distributionManagement>
+		<!-- Publish versioned releases here -->
+		<repository>
+			<id>nexusreleases</id>
+			<name>releases</name>
+			<url>http://ec2-52-35-62-154.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/nexusreleases/</url>
+		</repository>
+
+		<!-- Publish snapshots here -->
+		<snapshotRepository>
+			<id>nexussnapshots</id>
+			<name>snapshots</name>
+			<url>http://ec2-52-35-62-154.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/nexussnapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+
 	<build>
+		<finalName>git-release-example</finalName>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.1</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-						<configuration>
-							<transformers>
-								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>hello.HelloWorld</mainClass>
-								</transformer>
-							</transformers>
-						</configuration>
-					</execution>
-				</executions>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
 			</plugin>
 		</plugins>
 	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
 
 </project>
