@@ -36,11 +36,11 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') {
+        stage('install') {
             steps {
-                echo("Deploying project for ")
+                echo("installing project for ")
                 sleep(time:5,unit:'SECONDS')
-                sh 'mvn deploy'
+                sh 'mvn install'
             }
             post {
                 success {
