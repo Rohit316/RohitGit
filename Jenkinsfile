@@ -44,10 +44,25 @@ pipeline {
             }
             post {
                 success {
-                    echo("Deploy stage completed with result 'SUCCESS'.")
+                    echo("install stage completed with result 'SUCCESS'.")
                 }
                 failure {
-                    echo("Deploy stage completed with result 'FAILURE'.")
+                    echo("install stage completed with result 'FAILURE'.")
+                }      
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo("deploying project for ")
+                sleep(time:5,unit:'SECONDS')
+                sh 'mvn deploy'
+            }
+            post {
+                success {
+                    echo("deploy stage completed with result 'SUCCESS'.")
+                }
+                failure {
+                    echo("deploy stage completed with result 'FAILURE'.")
                 }      
             }
         }
