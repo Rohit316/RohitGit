@@ -5,9 +5,9 @@
 	<groupId>com.vitormp</groupId>
 	<artifactId>git-release-example</artifactId>
 	<version>0.1.14-SNAPSHOT</version>
-	<packaging>war<packaging>
+	<packaging>war</packaging>
 
-	<name>git-release-example Maven Webapp</name
+		<name>git-release-example Maven Webapp</name>
 
 	<scm>
 		<connection>scm:git:https://github.com/Rohit316/RohitGit.git</connection>
